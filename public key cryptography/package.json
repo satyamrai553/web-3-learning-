@@ -1,0 +1,16 @@
+{
+  "name": "pblic-key-cryptography",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -b && node ./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@noble/ed25519": "^2.2.3",
+    "@solana/web3.js": "^1.98.2",
+    "tweetnacl": "^1.0.3"
+  }
+}
