@@ -37,6 +37,26 @@
 
 
 
+// import {Connection, PublicKey, LAMPORTS_PER_SOL }from "@solana/web3.js"
+
+// const suppliedPubKey = process.argv[2];
+// if(!suppliedPubKey){
+//     throw new Error("Provide a public key to check the balance of!");
+// }
+
+// const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+// const publicKey = new PublicKey(suppliedPubKey)
+// const BalanceInLamports =await connection.getBalance(publicKey);
+// const balanceInSOL = BalanceInLamports / LAMPORTS_PER_SOL;
+
+// console.log(
+//   `💰 Finished! The balance for the wallet at address ${publicKey} is ${balanceInSOL}!`
+// );
+
+
+
+
+//main net wallet code 
 import {Connection, PublicKey, LAMPORTS_PER_SOL }from "@solana/web3.js"
 
 const suppliedPubKey = process.argv[2];
@@ -44,8 +64,9 @@ if(!suppliedPubKey){
     throw new Error("Provide a public key to check the balance of!");
 }
 
-const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+const connection = new Connection("https://api.mainnet-beta.solana.com", "confirmed");
 const publicKey = new PublicKey(suppliedPubKey)
+
 const BalanceInLamports =await connection.getBalance(publicKey);
 const balanceInSOL = BalanceInLamports / LAMPORTS_PER_SOL;
 
