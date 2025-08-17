@@ -1,4 +1,5 @@
 .env
 package-lock.json
 dist
+tsconfig.tsbuildinfo
 node_modules

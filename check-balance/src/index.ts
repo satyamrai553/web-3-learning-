@@ -1,0 +1,50 @@
+// import { Connection, clusterApiUrl } from "@solana/web3.js";
+
+
+
+// const connection = new Connection(clusterApiUrl("devnet"));
+// console.log(connection)
+// console.log(`✅ Connected!`);
+
+
+// import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
+
+// const connection = new Connection(clusterApiUrl("devnet"));
+// const address = new PublicKey("CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN");
+// const balance = await connection.getBalance(address);
+
+// console.log(`The balance of the account at ${address} is ${balance} lamports`);
+// console.log(`✅ Finished!`);
+
+
+
+// import {
+//   Connection,
+//   PublicKey,
+//   clusterApiUrl,
+//   LAMPORTS_PER_SOL
+// } from "@solana/web3.js";
+
+// console.log(clusterApiUrl)
+// const connection = new Connection(clusterApiUrl("devnet"));
+// const address = new PublicKey("CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN");
+// const balance = await connection.getBalance(address);
+// const balanceInSol = balance / LAMPORTS_PER_SOL;
+
+// console.log(`The balance of the account at ${address} is ${balanceInSol} SOL`);
+// console.log(`✅ Finished!`);
+
+
+
+
+import {Connection, PublicKey, LAMPORTS_PER_SOL }from "@solana/web3.js"
+
+
+const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+const publicKey = new PublicKey("9Uq2D2nAh598sMjDUW2qhp2qCVsT5WsvL2P7E8geGsWz")
+const BalanceInLamports =await connection.getBalance(publicKey);
+const balanceInSOL = BalanceInLamports / LAMPORTS_PER_SOL;
+
+console.log(
+  `💰 Finished! The balance for the wallet at address ${publicKey} is ${balanceInSOL}!`
+);
